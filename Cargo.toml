@@ -13,7 +13,7 @@ readme = "README.md"
 
 [dependencies]
 thiserror_core2-impl = { version = "2.0.0", path = "impl" }
-core2 = { git = "https://github.com/bbqsrc/core2", branch = "main", default-features=false, features=["alloc"]}
+core2 = { version="0.3.5",git = "https://github.com/jredrado/core2", branch = "main", default-features=false, features=["alloc","nightly"]}
 
 [dev-dependencies]
 anyhow = "1.0"
