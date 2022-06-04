@@ -1,7 +1,9 @@
 use crate::ast::{Enum, Field, Input, Struct, Variant};
 use crate::attr::Attrs;
 use quote::ToTokens;
-use std::collections::BTreeSet as Set;
+
+use alloc::collections::btree_set::BTreeSet as Set;
+
 use syn::{Error, GenericArgument, Member, PathArguments, Result, Type};
 
 impl Input<'_> {

@@ -13,6 +13,7 @@
 )]
 
 extern crate proc_macro;
+extern crate alloc;
 
 mod ast;
 mod attr;

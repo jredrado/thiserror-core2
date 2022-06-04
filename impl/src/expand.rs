@@ -3,7 +3,9 @@ use crate::attr::Trait;
 use crate::generics::InferredBounds;
 use proc_macro2::TokenStream;
 use quote::{format_ident, quote, quote_spanned, ToTokens};
-use std::collections::BTreeSet as Set;
+
+use alloc::collections::btree_set::BTreeSet as Set;
+
 use syn::spanned::Spanned;
 use syn::{
     Data, DeriveInput, GenericArgument, Member, PathArguments, Result, Token, Type, Visibility,

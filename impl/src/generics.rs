@@ -1,7 +1,11 @@
 use proc_macro2::TokenStream;
 use quote::ToTokens;
-use std::collections::btree_map::Entry;
-use std::collections::{BTreeMap as Map, BTreeSet as Set};
+
+use alloc::collections::btree_map::Entry;
+
+use alloc::collections::btree_set::BTreeSet as Set;
+use alloc::collections::btree_map::BTreeMap as Map;
+
 use syn::punctuated::Punctuated;
 use syn::{parse_quote, GenericArgument, Generics, Ident, PathArguments, Token, Type, WhereClause};
 

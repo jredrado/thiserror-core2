@@ -2,7 +2,11 @@ use crate::ast::Field;
 use crate::attr::{Display, Trait};
 use proc_macro2::TokenTree;
 use quote::{format_ident, quote_spanned};
-use std::collections::{BTreeSet as Set, HashMap as Map};
+
+
+use alloc::collections::btree_set::BTreeSet as Set;
+use alloc::collections::btree_map::BTreeMap as Map;
+
 use syn::ext::IdentExt;
 use syn::parse::{ParseStream, Parser};
 use syn::{Ident, Index, LitStr, Member, Result, Token};
@@ -10,6 +14,7 @@ use syn::{Ident, Index, LitStr, Member, Result, Token};
 impl Display<'_> {
     // Transform `"error {var}"` to `"error {}", var`.
     pub fn expand_shorthand(&mut self, fields: &[Field]) {
+        /*
         let raw_args = self.args.clone();
         let mut named_args = explicit_named_args.parse2(raw_args).unwrap();
         let mut member_index = Map::new();
@@ -116,6 +121,7 @@ impl Display<'_> {
         self.args = args;
         self.has_bonus_display = has_bonus_display;
         self.implied_bounds = implied_bounds;
+        */
     }
 }
 
