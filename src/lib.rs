@@ -198,6 +198,8 @@
 //!   }
 //!   ```
 
+#![no_std]
+
 #![allow(
     // Clippy bug: https://github.com/rust-lang/rust-clippy/issues/7421
     clippy::doc_markdown,
@@ -216,6 +218,6 @@ pub mod private {
     pub use crate::aserror::AsDynError;
     pub use crate::display::DisplayAsDisplay;
     
-    #[cfg(feature = "std")]
-    pub use crate::display::PathAsDisplay;
+    /*#[cfg(feature = "std")]
+    pub use crate::display::PathAsDisplay;*/
 }
